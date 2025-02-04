@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOBS - Solana Memecoin</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: white;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .ca-container {
+            margin: 20px 0;
+        }
+
+        .ca-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .ca-box button {
+            background: #ffb6c1; /* Light Pink */
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out, background 0.3s ease;
+        }
+
+        .ca-box button:active {
+            transform: scale(0.9);
+            background: #ff80a0; /* Slightly darker pink */
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: block;
+            padding: 12px;
+            background: #ffb6c1; /* Light Pink */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out, background 0.3s ease;
+        }
+
+        .btn:active {
+            transform: scale(0.9);
+            background: #ff80a0; /* Slightly darker pink */
+        }
+
+        /* Chart Styling */
+        .chart-container {
+            width: 90%;
+            max-width: 900px;
+            margin-top: 30px;
+        }
+
+        .chart-container iframe {
+            width: 100%;
+            height: 700px; /* Bigger Chart */
+            border-radius: 10px;
+        }
+
+        /* Meme Sections */
+        .meme-section {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+        .meme-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .meme-container img, .meme-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BOOBS ($BOOBS)</h1>
+        <p>The hottest new memecoin on Solana.</p>
+
+        <div class="image-container">
+            <img src="eight.jpeg" alt="BOOBS Meme">
+        </div>
+
+        <div class="ca-container">
+            <p>Contract Address:</p>
+            <div class="ca-box">
+                <span id="ca-text">Hjhb7yUYCS2SDEzyPqZQijaQaQF9p5N4sSEegPhkpump</span>
+                <button id="copy-btn">Copy</button>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="https://t.me/BOOBS8008" class="btn" target="_blank">Telegram</a>
+            <a href="https://dexscreener.com/solana/GCzD3y9mHTxaELAMQgCZCCCEcnFLA4R3RQW2fNin3D25" class="btn" target="_blank">Dexscreener</a>
+            <a href="https://pump.fun/coin/Hjhb7yUYCS2SDEzyPqZQijaQaQF9p5N4sSEegPhkpump?coin_sort=market_cap&origin=search_bar" class="btn" target="_blank">Pump.fun</a>
+        </div>
+    </div>
+
+    <!-- Chart Container -->
+    <div class="chart-container">
+        <iframe 
+            src="https://birdeye.so/tv-widget/Hjhb7yUYCS2SDEzyPqZQijaQaQF9p5N4sSEegPhkpump?chain=solana&viewMode=pair&chartInterval=1&chartType=Candle&chartTimezone=Europe%2FBerlin&chartLeftToolbar=show&theme=dark&chartOverrides=mainSeriesProperties.candleStyle.upColor%3A%23ff83c5&chartOverrides=mainSeriesProperties.candleStyle.borderUpColor%3A%23ff83c5&chartOverrides=mainSeriesProperties.candleStyle.wickUpColor%3A%23ff83c5&chartOverrides=mainSeriesProperties.candleStyle.wickDownColor%3A%233773f2&chartOverrides=mainSeriesProperties.candleStyle.borderDownColor%3A%233773f2&chartOverrides=mainSeriesProperties.candleStyle.downColor%3A%233773f2" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Meme Videos Section -->
+    <div class="meme-section">
+        <h2>🎥 Videos</h2>
+        <div class="meme-container">
+            <video controls>
+                <source src="meme1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="meme2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="meme3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>      
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("copy-btn").addEventListener("click", function () {
+            const caText = document.getElementById("ca-text").innerText;
+            navigator.clipboard.writeText(caText).then(() => {
+                alert("Contract Address Copied!");
+            });
+        });
+    </script>
+</body>
+</html>
